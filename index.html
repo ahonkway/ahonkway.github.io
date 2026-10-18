@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HarmoniRobot — Personal Backup Tool</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+         max-width: 760px; margin: 0 auto; padding: 40px 20px; line-height: 1.65;
+         color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.9rem; margin-bottom: .2em; }
+  h2 { font-size: 1.2rem; margin-top: 1.8em; border-bottom: 1px solid #e5e5e5; padding-bottom: .3em; }
+  .sub { color: #666; margin-top: 0; }
+  ul { padding-left: 1.3em; }
+  li { margin: .35em 0; }
+  code { background: #f4f4f4; padding: .15em .4em; border-radius: 3px; font-size: .9em; }
+  footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #e5e5e5;
+           color: #666; font-size: .9rem; }
+  a { color: #0b5fff; }
+</style>
+</head>
+<body>
+
+<h1>HarmoniRobot</h1>
+<p class="sub">Personal backup tool — single-user, private use</p>
+
+<h2>What this application is</h2>
+<p>
+  HarmoniRobot is a <strong>private, single-user application</strong>. It is the personal
+  OAuth client used by one individual (the operator) to back up data from a local AI
+  assistant running on the operator's own computer to that same operator's own Google
+  Drive account.
+</p>
+<p>
+  It is not a public product, not offered to the public, and has no users other than
+  its owner.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Creates a compressed backup archive of the operator's local assistant data
+      (configuration, saved procedures, conversation history, and task schedules).</li>
+  <li>Uploads that archive into a private folder in the operator's own Google Drive.</li>
+  <li>Keeps only the two most recent backups, removing older ones to conserve storage.</li>
+</ul>
+
+<h2>What data it accesses</h2>
+<p>
+  The application only ever accesses the Google account that has explicitly authorized
+  it — the operator's own account. It does not access any other person's data.
+  The Google scopes it may request are used solely to perform the operator's own
+  file management and productivity tasks:
+</p>
+<ul>
+  <li><code>drive</code> — create and manage backup files in the operator's own Drive</li>
+  <li><code>spreadsheets</code> — read and update the operator's own spreadsheets</li>
+  <li><code>documents</code> — read and update the operator's own documents</li>
+  <li><code>gmail.readonly</code>, <code>gmail.send</code>, <code>gmail.modify</code> —
+      read, send, and organise the operator's own email on request</li>
+  <li><code>calendar</code> — read and create the operator's own calendar events</li>
+  <li><code>contacts.readonly</code> — read the operator's own contacts</li>
+</ul>
+
+<h2>How your data is handled</h2>
+<ul>
+  <li><strong>No data collection.</strong> No analytics, no tracking, no telemetry.</li>
+  <li><strong>No third parties.</strong> Data is never transmitted anywhere except directly
+      between the operator's computer and Google's servers.</li>
+  <li><strong>No server of our own.</strong> All processing happens locally on the
+      operator's machine. There is no intermediate backend or hosted component.</li>
+  <li><strong>No selling or sharing.</strong> Google user data is never sold, rented,
+      transferred, or disclosed to anyone.</li>
+  <li><strong>Tokens stored locally only.</strong> OAuth credentials are kept in a file on
+      the operator's own computer and are sent only to Google, to authenticate.</li>
+  <li><strong>No use for advertising.</strong> Google user data is never used to serve ads
+      or train advertising models.</li>
+</ul>
+
+<h2>Privacy policy</h2>
+<p>
+  Read the full <a href="./privacy.html">Privacy Policy</a>.
+</p>
+
+<footer>
+  Contact: <a href="mailto:ahonkway@gmail.com">ahonkway@gmail.com</a><br>
+  Last updated: 16 October 2026
+</footer>
+
+</body>
+</html>
